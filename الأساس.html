@@ -1,71 +1,0 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>تقديم على ادمن</title>
-        <link rel="stylesheet" href="الألوان.css">
-</head>
-
-<body>
-
-  
-  
-  
-<h1 id="ip">مرحبا بك في موقع التقديم على ادمن Real War Nationلسيرفر 
-</h1>
-
-<h2 id="oi">املئ     البيانات</h2>
-<form id="signupForm">
-  <label id="i">1: اسمك</label><br>
-  <input type="text" name="username" required><br><br>
-
-  <label id="i">2: عمرك</label><br>
-  <input type="number" name="age" required><br><br>
-<br>
-
-  <label id="i">3: انت محترف في ايه</label><br>
-  <input type="text" name="skill" required><br><br>
-
-  <label id="i">4: كم اصدارك</label><br>
-  <input type="text" name="version" required><br><br>
-
-  <label id="i">5: اسمك في اتيرنوس</label><br>
-  <input type="text" name="aternos_name" required><br><br>
-
-  <button type="submit" id="k">إرسال</button>
-</form>
-
-
-<!-- مكتبة EmailJS -->
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-  (function(){
-    // 🔑 Public Key بتاعك
-    emailjs.init("pKMoiQYLN70uJ775i");
-  })();
-
-  document.getElementById("signupForm").addEventListener("submit", function(e){
-    e.preventDefault();
-
-    emailjs.sendForm("service_jnhu13l", "template_bbzpqv7", this)
-    .then(function(){
-      alert("✅ تم إرسال بياناتك لصاحب السيرفر وسيتم الرد عليك ");
-    }, function(error){
-      alert("❌ حصل خطأ: " + JSON.stringify(error));
-    });
-  });
-</script>
-
-
-
-
-
-
-
-
-
-</body>
-
-</html>
